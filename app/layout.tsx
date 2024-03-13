@@ -10,9 +10,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "NextJS Tailwind Event Landing Page",
+  title: "North Karnataka Tennis Association",
   description:
-    "Introducing Tailwind Event Landing Page, a dynamic and visually appealing landing page template designed using Tailwind CSS and Material Tailwind.",
+    "North Karnataka Tennis Association is a organization that promotes tennis in North Karnataka. We are a group of tennis enthusiasts who are passionate about the sport and want to help others learn and grow in the sport. We offer tennis tournaments, and other events to help people get involved in the sport. so if you are interested in tennis and want to help us promote the sport in North Karnataka, please get in touch with us today.",
 };
 
 export default function RootLayout({
@@ -23,17 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          defer
-          data-site="YOUR_DOMAIN_HERE"
-          src="https://api.nepcha.com/js/nepcha-analytics.js"
-        ></script>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
       <body className={roboto.className}>
         <Layout>
           {children}
-          <FixedPlugin />
         </Layout>
         <link
           rel="stylesheet"

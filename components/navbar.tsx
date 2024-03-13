@@ -7,12 +7,15 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import {
-  RectangleStackIcon,
+  BuildingOfficeIcon,
   UserCircleIcon,
   CommandLineIcon,
   Squares2X2Icon,
   XMarkIcon,
   Bars3Icon,
+  UserGroupIcon,
+  PauseIcon,
+  RectangleStackIcon,
 } from "@heroicons/react/24/solid";
 
 interface NavItemProps {
@@ -39,18 +42,17 @@ function NavItem({ children, href }: NavItemProps) {
 
 const NAV_MENU = [
   {
-    name: "Page",
+    name: "About NKTA",
+    icon: BuildingOfficeIcon,
+  },
+  {
+    name: "Commitee Members",
+    icon: UserGroupIcon,
+  },
+  {
+    name: "Rankings",
     icon: RectangleStackIcon,
-  },
-  {
-    name: "Account",
-    icon: UserCircleIcon,
-  },
-  {
-    name: "Docs",
-    icon: CommandLineIcon,
-    href: "https://www.material-tailwind.com/docs/react/installation",
-  },
+  }
 ];
 
 export function Navbar() {
@@ -95,7 +97,7 @@ export function Navbar() {
           className="text-lg font-bold"
           placeholder=""
         >
-          Material Tailwind
+          North Karnataka Tennis Association
         </Typography>
         <ul
           className={`ml-10 hidden items-center gap-6 lg:flex ${
@@ -113,8 +115,8 @@ export function Navbar() {
           <Button color={isScrolling ? "gray" : "white"} variant="text" placeholder="">
             Log in
           </Button>
-          <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color={isScrolling ? "gray" : "white"} placeholder="">blocks</Button>
+          <a href="#" target="_blank">
+            <Button color={isScrolling ? "gray" : "white"} placeholder="">Players</Button>
           </a>
         </div>
         <IconButton
@@ -143,8 +145,8 @@ export function Navbar() {
           </ul>
           <div className="mt-6 flex items-center gap-4">
             <Button variant="text" placeholder="">Log in</Button>
-            <a href="https://www.materila-tailwind.com/blocks" target="_blank">
-              <Button color="gray" placeholder="">blocks</Button>
+            <a href="#" target="_blank">
+              <Button color="gray" placeholder="">Players</Button>
             </a>
           </div>
         </div>
