@@ -5,49 +5,44 @@ import AboutCard from "../components/about-card";
 
 const EVENT_INFO = [
   {
-    title: "Cutting-Edge Insights!",
+    title: "SHORT TERM GOALS",
     description:
-      "Gain deep insights into the latest AI trends, developments, and applications that are reshaping industries worldwide. ",
+      [
+        'Promoting tennis in younger generations of our region.',
+      'Formulating the current structure of tennis in north Karnataka by developing a ranking system which will helps players understand there progress and motivate them to perform better day after day.',
+      'To provide information regarding all upcoming events, rules, participation etc being conducted under the banner of NKTA and information on players , their current standing, performances, details etc.',
+      'Help conduct tournaments under the banner of NKTA with financial aid, systematic score maintenance and dynamic website uploading, making a fair draw, standardising categories for events.',
+      'Provide short term coaching in different districts of north Karnataka to promote tennis.'
+    ],
     subTitle: "Presentation",
   },
   {
-    title: "Practical Knowledge!",
+    title: "LONG TERM GOALS",
     description:
-      "Attend workshops and hands-on sessions to acquire practical skills that you can apply immediately.",
+      ['Formation of a self sustainable professional tennis academy in north Karnataka.',
+      'To sponsor exceptional talent and help them achieve there goals.',
+      'Conduct regular camps in various districts of north Karnataka all round the year and motivate more young children to take up tennis.'],
     subTitle: "Workshops",
   },
 ];
 
 export function AboutEvent() {
   return (
-    <section className="container mx-auto flex flex-col items-center px-4 py-10">
-      <Typography variant="h6" className="text-center mb-2" color="orange" placeholder="">
-        About the event
-      </Typography>
+    <section id="aboutnkta" className="container mx-auto flex flex-col items-center px-4 py-10">
       <Typography variant="h3" className="text-center" color="blue-gray" placeholder="">
-        Why Attend?
+        All about NKTA
       </Typography>
       <Typography
         variant="lead"
         className="mt-2 lg:max-w-4xl mb-8 w-full text-center font-normal !text-gray-500"
         placeholder=""
       >
-        Welcome to the AI Conference 2023, where the future unfolds! Whether
-        you&apos;re a seasoned AI professional, a curious newcomer, or a
-        business leader looking to harness the power of AI, this conference is
-        designed to inspire, educate, and connect.
+        NKTA is a non profitable organisation which brings together players from all private, semi private and department run clubs in north Karnataka region together. 
       </Typography>
-      <div className="mt-8 w-full grid grid-cols-1 md:grid-cols-2 gap-4 ">
+      <div className="md:col-span-2">
         {EVENT_INFO.map((props, idx) => (
           <AboutCard key={idx} {...props} />
         ))}
-        <div className="md:col-span-2">
-          <AboutCard
-            title="Networking!"
-            subTitle="Community"
-            description="Connect with industry leaders, AI experts, and fellow enthusiasts to build valuable professional relationships."
-          />
-        </div>
       </div>
     </section>
   );
